@@ -1,0 +1,39 @@
+@import "common/styles/mixins.scss";
+@import "common/styles/variables.scss";
+
+.inputWrapper {
+  position: relative;
+  width: 440px;
+  .input {
+    height: 59px;
+    width: 440px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    border-radius: 40px;
+    padding: 16px 60px 16px 27px;
+    outline: none;
+    @include text(400, 18px, 150%);
+    &::placeholder {
+      @include text(400, 18px, 150%, rgba(0, 0, 0, 0.6));
+    }
+  }
+  .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: none;
+    background-color: $red100;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $red300;
+      transition: .3s;
+    }
+  }
+}
