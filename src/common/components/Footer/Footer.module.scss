@@ -1,0 +1,56 @@
+@import "common/styles/mixins.scss";
+@import "common/styles/variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 192px;
+  background-color: $blue300;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 111px;
+
+  .button {
+    position: absolute;
+    right: 111px;
+    display: flex;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    column-gap: 10px;
+    cursor: pointer;
+    @include text(400, 20px, 150%, $light100);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 79%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: $light100;
+      transform-origin: center;
+      transition: transform 0.25s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: center;
+    }
+
+    .arrow {
+      transition: .5s ease-out;
+    }
+
+    &:hover {
+      .arrow {
+        transform: rotate(180deg);
+        transition: .5s ease-out;
+      }
+    }
+
+  }
+}
