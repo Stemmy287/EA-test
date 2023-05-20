@@ -1,0 +1,17 @@
+@import "common/styles/mixins.scss";
+@import "common/styles/variables.scss";
+
+.container {
+  position: relative;
+  height: 100vh;
+  padding-top: 75px;
+  .leftSide {
+    position: absolute;
+    top: 0;
+  }
+  .rightSide {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
