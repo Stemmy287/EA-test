@@ -1,0 +1,8 @@
+@import "common/styles/mixins.scss";
+@import "common/styles/variables.scss";
+
+.title {
+  @include text(700, 72px, 104%, $blue300);
+  text-transform: uppercase;
+  opacity: .39;
+}
