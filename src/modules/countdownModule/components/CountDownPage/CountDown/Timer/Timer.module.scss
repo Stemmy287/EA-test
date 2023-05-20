@@ -1,0 +1,24 @@
+@import "common/styles/mixins.scss";
+@import "common/styles/variables.scss";
+
+.container {
+  display: flex;
+  .number {
+    > span {
+      @include text(600, 72px, 100%, $blue300);
+
+      &:nth-child(1) {
+        margin-right: 24px;
+      }
+    }
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 54px;
+    background-color: $red100;
+    @include text(400, 16px, 100%, $light100);
+
+  }
+}
