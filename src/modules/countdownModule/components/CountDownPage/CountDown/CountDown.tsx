@@ -10,7 +10,9 @@ export const CountDown = () => {
 
 	return (
 		<div className={s.container}>
-			<Logo className={s.logo} />
+			<a href="/">
+				<Logo className={s.logo} />
+			</a>
 			<div className={s.infoContainer}>
 				<Title title="Under Construction"/>
 				<span className={s.info}>We're making lots of improvements and will be back soon</span>
@@ -18,10 +20,12 @@ export const CountDown = () => {
 			<Timer />
 			<div className={s.eventNav}>
 				<span>Check our event page when you wait:</span>
-				<Button callback={() => {}}>
-					Go to the event
-					<Arrow />
-				</Button>
+				<form action="https://youtu.be/dQw4w9WgXcQ" target="_blank">
+					<Button>
+						Go to the event
+						<Arrow />
+					</Button>
+				</form>
 			</div>
 		</div>
 	);

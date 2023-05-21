@@ -73,7 +73,13 @@ export const Events = () => {
 							<div className={s.info}>
 								<h4>{event.title}</h4>
 								<span>{event.date}</span>
-								<a href="">More information</a>
+								<a
+									href="https://youtu.be/dQw4w9WgXcQ"
+									rel="noreferrer"
+									target="_blank"
+								>
+									More information
+								</a>
 							</div>
 						</div>
 					</div>

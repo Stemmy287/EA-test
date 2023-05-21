@@ -3,7 +3,7 @@ import s from './Button.module.scss';
 
 type PropsType = {
 	children: ReactNode
-	callback: () => void
+	callback?: () => void
 }
 
 export const Button = ({ children, callback }: PropsType) => {
