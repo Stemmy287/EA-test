@@ -1,28 +1,30 @@
-import React from 'react';
+import React, { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 import s from './Input.module.scss';
-import {ReactComponent as Arrow} from 'common/icons/arrow-right.svg';
+import { ReactComponent as Arrow } from 'common/icons/arrow-right.svg';
 
 type PropsType = {
-	value: string
-	onChange: () => void
 	callback: () => void
-	placeholder?: string
-	disabled?: boolean
+	error?: string
 }
 
-export const Input = ({value, onChange, callback, placeholder, disabled}: PropsType) => {
+type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>,
+	HTMLInputElement>
+
+export const Input = ({
+												callback,
+												error,
+												...restProps
+											}: PropsType & DefaultInputPropsType) => {
 	return (
 		<div className={s.inputWrapper}>
 			<input
 				className={s.input}
-				value={value}
-				onChange={onChange}
-				placeholder={placeholder}
-				disabled={disabled}
+				{...restProps}
 			/>
 			<button className={s.button} onClick={callback}>
-				<Arrow/>
+				<Arrow />
 			</button>
+			{error && <div className={s.error}>{error}</div>}
 		</div>
 	);
 };

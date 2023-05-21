@@ -36,4 +36,11 @@
       transition: .3s;
     }
   }
+  .error {
+    @include text(400, 16px, 100%, $red100);
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
