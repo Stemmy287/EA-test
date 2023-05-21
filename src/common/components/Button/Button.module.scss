@@ -6,11 +6,12 @@
   background-color: $blue100;
   border: 0;
   border-radius: 40px;
-  width: 240px;
+  column-gap: 35px;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px 0 28px;
+  justify-content: center;
+  padding: 0 28px 0 28px;
   cursor: pointer;
   @include text(400, 18px, 150%, $light100);
 
