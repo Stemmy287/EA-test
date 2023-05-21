@@ -1,10 +1,10 @@
 import React from 'react';
 import s from './CountDown.module.scss';
 import { ReactComponent as Logo } from 'common/icons/logo.svg';
-import { Button } from '../../../../../common/components';
+import { Button } from 'common/components';
 import { ReactComponent as Arrow } from 'common/icons/arrow-right.svg';
-import { Timer } from './Timer/Timer';
-import { Title } from '../../../../../common/components/Title/Title';
+import { Timer } from 'modules/countdownModule';
+import { Title } from 'common/components';
 import { Fade } from 'react-awesome-reveal';
 
 export const CountDown = () => {
@@ -30,10 +30,12 @@ export const CountDown = () => {
 				<div className={s.eventNav}>
 					<span>Check our event page when you wait:</span>
 					<form action="https://youtu.be/dQw4w9WgXcQ" target="_blank">
-						<Button>
-							Go to the event
-							<Arrow />
-						</Button>
+						<div className={s.btn}>
+							<Button>
+								Go to the event
+								<Arrow />
+							</Button>
+						</div>
 					</form>
 				</div>
 			</Fade>
