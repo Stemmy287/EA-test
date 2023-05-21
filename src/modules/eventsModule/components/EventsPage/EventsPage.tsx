@@ -5,7 +5,7 @@ import { Events } from './Events/Events';
 
 export const EventsPage = () => {
 	return (
-		<div className={s.container}>
+		<div className={s.container} id="eventsPage">
 			<Title title="All events"/>
 			<Events/>
 		</div>
