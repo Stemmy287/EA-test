@@ -1,89 +1,67 @@
 import React, { useState } from 'react';
 import s from './Events.module.scss';
 import defaultPhoto from 'common/images/defaultPhoto.png';
+import { Event } from './Event/Event';
 
 export const Events = () => {
 
 	const arrForEvents = [
 		{
+			id: 1,
 			title: 'Hawaiian party',
 			date: '13.02.2023',
 			photo: defaultPhoto
 		},
 		{
+			id: 2,
 			title: 'Mafia party',
 			date: '13.02.2023',
 			photo: defaultPhoto
 		},
 		{
+			id: 3,
 			title: 'Party',
 			date: '13.02.2023',
 			photo: defaultPhoto
 		},
 		{
+			id: 4,
 			title: 'Party on the Beach',
 			date: '13.02.2023',
 			photo: defaultPhoto
 		},
 		{
+			id: 5,
 			title: 'Home Security',
 			date: '13.02.2023',
 			photo: defaultPhoto
 		},
 		{
+			id: 6,
 			title: 'Network Design and Implementation',
 			date: '13.02.2023',
 			photo: defaultPhoto
 		},
 		{
+			id: 7,
 			title: 'System Design & Engineering',
 			date: '13.02.2023',
 			photo: defaultPhoto
 		},
 		{
+			id: 8,
 			title: 'Client Care Plans',
 			date: '13.02.2023',
 			photo: defaultPhoto
 		}
 	];
 
-	const [selected, setSelected] = useState(0);
-	const toggle = (i: number) => {
-		setSelected(i);
-	};
+	const [selected, setSelected] = useState(1);
 
 	return (
 		<div className={s.container}>
-			{arrForEvents.map((event, i) =>
-				<div className={s.item} key={i}>
-					<div
-						style={{ backgroundImage: selected !== i ? `linear-gradient(to top, rgb(22,44,78), rgb(0,0,0, .6)) ,url(${event.photo})` : '' }}
-						className={selected === i ? `${s.title} ${s.pickedTitle}` : s.title}
-						onClick={() => toggle(i)}
-					>
-						<span className={s.name}>{event.title}</span>
-						<span className={s.number}>{i < 10 ? '0' + (i + 1) : i + 1}</span>
-					</div>
-					<div
-						style={{ backgroundImage: `url(${event.photo})` }}
-						className={selected === i ? `${s.content} ${s.showContent}` : s.content}
-					>
-						<div className={s.infoBlock}>
-							<span>{i < 10 ? '0' + (i + 1) : i + 1}</span>
-							<div className={s.info}>
-								<h4>{event.title}</h4>
-								<span>{event.date}</span>
-								<a
-									href="https://youtu.be/dQw4w9WgXcQ"
-									rel="noreferrer"
-									target="_blank"
-								>
-									More information
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+			{arrForEvents.map((event) =>
+				<Event event={event} selected={selected} toggle={setSelected}/>
 			)}
 		</div>
 	);
