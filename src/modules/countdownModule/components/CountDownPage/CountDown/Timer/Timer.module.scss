@@ -3,22 +3,22 @@
 
 .container {
   display: flex;
-  .number {
-    > span {
-      @include text(600, 72px, 100%, $blue300);
-
-      &:nth-child(1) {
-        margin-right: 24px;
+    .number {
+      display: flex;
+      > span {
+        @include text(600, 72px, 100%, $blue300);
+        &:nth-child(1) {
+          margin: 0 24px;
+        }
       }
     }
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 54px;
+      background: url("../../../../../../common/images/figure.png") no-repeat;
+      @include text(400, 16px, 100%, $light100);
+      width: 132px;
+    }
   }
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 54px;
-    background-color: $red100;
-    @include text(400, 16px, 100%, $light100);
-
-  }
-}
