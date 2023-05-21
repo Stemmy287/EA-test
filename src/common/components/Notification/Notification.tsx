@@ -15,9 +15,12 @@ export const Notification = ({title, message, onClose}: PropsType) => {
 			<Close className={s.close} onClick={onClose}/>
 			<h3>{title}</h3>
 			<span>{message}</span>
-			<Button  callback={onClose}>
-				Close
-			</Button>
+			<div className={s.btn}>
+				<Button  callback={onClose}>
+					Close
+				</Button>
+			</div>
+
 		</div>
 	);
 };

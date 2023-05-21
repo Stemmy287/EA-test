@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './EventsPage.module.scss';
-import { Title } from '../../../../common/components/Title/Title';
+import { Title } from 'common/components';
 import { Events } from './Events/Events';
 import { Fade } from 'react-awesome-reveal';
 
