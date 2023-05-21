@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.scss';
 import { CountdownPage } from 'modules/countdownModule';
-import { Events } from '../modules/EventsModule/components/Events/Events';
+import { EventsPage } from 'modules/eventsModule';
 
 export function App() {
 
 	return (
 		<>
 			<CountdownPage />
-			<Events />
+			<EventsPage />
 		</>
 	);
 }

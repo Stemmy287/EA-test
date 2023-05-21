@@ -18,8 +18,7 @@ export const CountDown = () => {
 			<Timer />
 			<div className={s.eventNav}>
 				<span>Check our event page when you wait:</span>
-				<Button callback={() => {
-				}}>
+				<Button callback={() => {}}>
 					Go to the event
 					<Arrow />
 				</Button>
