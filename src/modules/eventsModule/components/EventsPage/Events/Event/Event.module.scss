@@ -4,6 +4,7 @@
 .container {
   display: flex;
 
+
   @media screen and (max-width: 1440px) {
     flex-direction: column-reverse;
   }
@@ -151,6 +152,7 @@
         }
         @media screen and (max-width: 768px) {
           font-size: calc(80px + (152 - 80) * ((100vw - 360px) / (768 - 360)));
+          right: calc(370px + (-10 - 370) * ((100vw - 360px) / (768 - 360)));
         }
         @media screen and (max-width: 360px) {
           font-size: 80px;

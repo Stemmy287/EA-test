@@ -16,6 +16,7 @@ export const Event = ({ event, selected, toggle }: PropsType) => {
 			? `linear-gradient(to top, rgb(22,44,78), rgb(0,0,0, .6)) ,url(${event.photo})`
 			: ''
 	};
+	const eventId = event.id < 10 ? '0' + event.id : event.id
 
 	return (
 		<div className={s.container} key={event.id}>
@@ -25,14 +26,14 @@ export const Event = ({ event, selected, toggle }: PropsType) => {
 				onClick={() => toggle(event.id)}
 			>
 				<span className={s.name}>{event.title}</span>
-				<span className={s.number}>{event.id < 10 ? '0' + event.id : event.id}</span>
+				<span className={s.number}>{eventId}</span>
 			</div>
 			<div
 				style={{ backgroundImage: `url(${event.photo})` }}
 				className={selected === event.id ? `${s.content} ${s.showContent}` : s.content}
 			>
 				<div className={s.infoBlock}>
-					<span>{event.id < 10 ? '0' + event.id : event.id}</span>
+					<span>{eventId}</span>
 					<div className={s.info}>
 						<h4>{event.title}</h4>
 						<span>{event.date}</span>
