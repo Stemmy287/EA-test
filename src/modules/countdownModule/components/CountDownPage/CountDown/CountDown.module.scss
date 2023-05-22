@@ -16,6 +16,9 @@
       width: 128px;
       height: 40px;
     }
+    @media screen and (max-height: 820px) {
+      margin-bottom: 20px;
+    }
   }
 
   .infoContainer {

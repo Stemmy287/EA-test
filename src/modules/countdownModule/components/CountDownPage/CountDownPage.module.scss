@@ -17,6 +17,9 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+  @media screen and (max-height: 820px) {
+    padding: 25px 520px 0 520px;
+  }
 
   .leftSide {
     position: absolute;

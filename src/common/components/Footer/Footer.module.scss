@@ -18,6 +18,11 @@
     padding: 35px 0;
   }
 
+  @media screen and (max-height: 720px) {
+    height: 150px;
+  }
+
+
   .button {
     position: absolute;
     right: 111px;
