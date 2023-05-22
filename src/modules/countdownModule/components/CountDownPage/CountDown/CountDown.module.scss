@@ -8,6 +8,14 @@
 
   .logo {
     margin-bottom: 92px;
+    @media screen and (max-width: 768px) {
+      width: calc(128px + (191 - 128) * ((100vw - 360px) / (768 - 360)));
+      height: calc(40px + (61 - 40) * ((100vw - 360px) / (768 - 360)));
+    }
+    @media screen and (max-width: 360px) {
+      width: 128px;
+      height: 40px;
+    }
   }
 
   .infoContainer {
@@ -20,7 +28,20 @@
     .info {
       @include text(400, 18px, 150%);
       text-align: center;
-      width: 423px;
+      max-width: 423px;
+
+      @media screen and (max-width: 1920px) {
+        font-size: calc(16px + (18 - 16) * ((100vw - 768px) / (1920 - 768)));
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+        row-gap: 20px;
+        max-width: 286px;
+      }
+    }
+    @media screen and (max-width: 671px) {
+      max-width: 418px;
+      row-gap: 20px;
     }
   }
   .eventNav {
@@ -29,6 +50,10 @@
     align-items: center;
     row-gap: 12px;
     margin-top: 71px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+    }
 
     .btn {
       width: 240px;

@@ -11,6 +11,12 @@
   bottom: 0;
   width: 100%;
   padding: 0 111px;
+  left: 0;
+  @media screen and (max-width: 1200px) {
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 35px 0;
+  }
 
   .button {
     position: absolute;
@@ -22,6 +28,17 @@
     column-gap: 10px;
     cursor: pointer;
     @include text(400, 20px, 150%, $light100);
+
+    @media screen and (max-width: 1200px) {
+      position: relative;
+      right: 0;
+    }
+    @media screen and (max-width: 1920px) {
+      font-size: calc(16px + (20 - 16) * ((100vw - 768px) / (1920 - 768)));
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+    }
 
     &::after {
       content: '';

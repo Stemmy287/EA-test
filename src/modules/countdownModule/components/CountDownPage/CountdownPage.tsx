@@ -9,10 +9,10 @@ import { Fade } from 'react-awesome-reveal';
 export const CountdownPage = () => {
 	return (
 		<div className={s.container}>
-			<Fade delay={500} triggerOnce={true}>
+{/*			<Fade delay={500} triggerOnce={true}>
 				<LeftSideFigure className={s.leftSide}/>
 				<RightSideFigure className={s.rightSide}/>
-			</Fade>
+			</Fade>*/}
 			<CountDown/>
 			<Footer />
 		</div>

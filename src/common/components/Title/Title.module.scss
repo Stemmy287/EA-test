@@ -4,5 +4,12 @@
 .title {
   @include text(700, 72px, 104%, $blue300);
   text-transform: uppercase;
+  text-align: center;
   opacity: .39;
+  @media screen and (max-width: 1920px) {
+    font-size: calc(36px + (72 - 36) * ((100vw - 768px) / (1920 - 768)));
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 36px;
+  }
 }

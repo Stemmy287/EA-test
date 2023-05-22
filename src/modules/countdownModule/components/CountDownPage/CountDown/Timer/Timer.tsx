@@ -25,7 +25,9 @@ export const Timer = () => {
 			{dateForMapping.map((el, i) =>
 				<div key={i}>
 					<div className={s.number}>
-						<span>{el.num < 10 ? '0' + el.num : el.num}</span>
+						<div className={s.numberWrapper}>
+							<span>{el.num < 10 ? '0' + el.num : el.num}</span>
+						</div>
 						{i < 3 && <span>:</span>}
 					</div>
 					<div className={s.title}>{el.title}</div>
