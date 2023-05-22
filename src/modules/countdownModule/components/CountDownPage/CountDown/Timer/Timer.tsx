@@ -14,12 +14,12 @@ export const Timer = () => {
 	} = useTimer({ expiryTimestamp: date });
 
 	const dateForMapping = [
-		{ num: days, title: 'Days' },
-		{ num: hours, title: 'Hours' },
-		{ num: minutes, title: 'Minutes' },
-		{ num: seconds, title: 'Seconds' }
+		{ num: days, title: window.innerWidth > 1271 ? 'Days' : 'DD' },
+		{ num: hours, title: window.innerWidth > 1271 ? 'Hours' : 'HH' },
+		{ num: minutes, title: window.innerWidth > 1271 ? 'Minutes' : 'MM' },
+		{ num: seconds, title: window.innerWidth > 1271 ? 'Seconds': 'SS' }
 	];
-
+	
 	return (
 		<div className={s.container}>
 			{dateForMapping.map((el, i) =>
