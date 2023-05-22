@@ -101,6 +101,7 @@
       align-items: end;
       height: 0;
       min-width: 688px;
+      background-size: 100%;
     }
     @media screen and (max-width: 768px) {
       min-width: calc(320px + (688 - 320) * ((100vw - 360px) / (768 - 360)));
