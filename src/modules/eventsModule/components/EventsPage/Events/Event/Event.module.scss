@@ -79,6 +79,13 @@
           border: 2px solid $light100;
           border-left: 7px solid $light100;
           width: 256px;
+          background: right bottom linear-gradient(to right, $light100 50%, transparent 50%);
+          background-size: 200% 100%;
+          transition: all .3s ease-out;
+          &:hover {
+            background-position: left bottom;
+            color: $dark100;
+          }
         }
       }
 

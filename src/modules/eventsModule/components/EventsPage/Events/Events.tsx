@@ -61,7 +61,7 @@ export const Events = () => {
 	return (
 		<div className={s.container}>
 			{arrForEvents.map((event) =>
-				<Event event={event} selected={selected} toggle={setSelected}/>
+				<Event key={event.id} event={event} selected={selected} toggle={setSelected}/>
 			)}
 		</div>
 	);
