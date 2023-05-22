@@ -18,13 +18,12 @@ export const Event = ({ event, selected, toggle }: PropsType) => {
 	};
 
 	return (
-		<div className={s.item} key={event.id}>
+		<div className={s.container} key={event.id}>
 			<div
 				className={selected === event.id ? `${s.title} ${s.pickedTitle}` : s.title}
 				style={BackgroundImg}
 				onClick={() => toggle(event.id)}
 			>
-				<div className={s.pickerTitle}></div>
 				<span className={s.name}>{event.title}</span>
 				<span className={s.number}>{event.id < 10 ? '0' + event.id : event.id}</span>
 			</div>

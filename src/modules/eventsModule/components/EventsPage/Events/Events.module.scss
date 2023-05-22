@@ -6,4 +6,10 @@
   display: flex;
   column-gap: 4px;
   margin-top: 40px;
+
+  @media screen and (max-width: 1440px) {
+    height: auto;
+    flex-direction: column;
+  }
+
 }
